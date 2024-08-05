@@ -7,7 +7,7 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
 }
-
+/* #region reset */
 a {
   text-decoration: none;
 }
@@ -15,6 +15,37 @@ a {
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 button {
@@ -38,10 +69,34 @@ h3 {
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* #endregion reset */
 /* #region header */
 
 .page-header {
   background-color: #fff;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .logo {
@@ -54,31 +109,43 @@ h3 {
   color: #4d5ae5;
 }
 
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
 .header-logo .logo-part {
   color: #2e2f42;
 }
 
 .nav-link {
+  padding: 24px 0;
+  display: block;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #404bbf;
-}
-
 address {
   font-style: normal;
 }
-
+.header-contacts {
+  font-style: normal;
+  margin-left: auto;
+}
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 .contacts-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 400;
   color: #434455;
 }
-
+.nav-link:hover,
+.nav-link:focus,
 .contacts-link:hover,
 .contacts-link:focus {
   color: #404bbf;
@@ -88,7 +155,10 @@ address {
 /* #region hero */
 .hero {
   background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
+
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -96,7 +166,12 @@ address {
   text-align: center;
   letter-spacing: 0.02em;
   color: #fff;
+  max-width: 496px;
+  margin-right: auto;
+  margin-bottom: 48px;
+  margin-left: auto;
 }
+
 .hero-btn {
   font-family: inherit;
   font-weight: 500;
@@ -105,32 +180,137 @@ address {
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
+  border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  margin-right: auto;
+  margin-left: auto;
 }
+
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: #404bbf;
 }
+
 /* #endregion hero */
+/* #region features */
+.features {
+  display: flex;
+  align-items: center;
+}
+.features-container {
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.features-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.features-item {
+  width: calc((100% - 3 * 24px) / 4);
+}
+
+.features-title {
+  padding-bottom: 8px;
+}
+
+/* #endregion features */
 /* #region Our Team */
 .team {
   background-color: #f4f4fd;
 }
+
+.our-team {
+  padding-top: 120px;
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 120px;
+}
+
 .team-item {
-  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  width: calc((100% - 3 * 24px) / 4);
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
+}
+
+.team-cards {
+  padding: 32px 16px;
+}
+
+.team-title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.team-text {
+  text-align: center;
 }
 /* #endregion Our Team */
 /* #region Our Portfolio*/
+.portfolio {
+}
+.our-portfolio {
+  padding-top: 120px;
+  margin-bottom: 72px;
+}
+.portfolio-list {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 48px;
+  flex-wrap: wrap;
+  padding-bottom: 120px;
+}
+
+.portfolio-text {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding: 32px 16px;
+}
+
 .portfolio-item {
   background-color: #fff;
+  width: calc((100% - 2 * 24px) / 3);
 }
+
+.portfolio-title {
+  margin-bottom: 8px;
+}
+
 /* #endregion Our Portfolio */
 /* #region footer */
 .footer {
   background-color: #2e2f42;
   color: #f4f4fd;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-logo .logo-part {
   color: #f4f4fd;
 }
+
+.logotype {
+  width: 115px;
+  margin-bottom: 16px;
+}
+
+.footer-text {
+  width: 264px;
+}
+
 /* #endregion footer */
