@@ -306,7 +306,9 @@ address {
   color: #f4f4fd;
 }
 
-.logo .footer-logo {
+.footer-logo {
+  width: 115px;
+  height: 24px;
   display: inline-block;
   margin-bottom: 16px;
 }
