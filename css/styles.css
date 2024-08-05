@@ -199,15 +199,14 @@ address {
 /* #endregion hero */
 /* #region features */
 .features {
-  display: flex;
-  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .features-container {
   display: flex;
   align-items: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
+
 .features-list {
   display: flex;
   align-items: center;
@@ -225,10 +224,11 @@ address {
 /* #region Our Team */
 .team {
   background-color: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .our-team {
-  padding-top: 120px;
   margin-bottom: 72px;
 }
 
@@ -236,7 +236,6 @@ address {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding-bottom: 120px;
 }
 
 .team-item {
@@ -248,7 +247,7 @@ address {
 }
 
 .team-cards {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .team-title {
@@ -261,19 +260,21 @@ address {
 }
 /* #endregion Our Team */
 /* #region Our Portfolio*/
+
 .portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .our-portfolio {
-  padding-top: 120px;
   margin-bottom: 72px;
 }
+
 .portfolio-list {
   display: flex;
   align-items: center;
   column-gap: 24px;
   row-gap: 48px;
   flex-wrap: wrap;
-  padding-bottom: 120px;
 }
 
 .portfolio-text {
@@ -305,13 +306,13 @@ address {
   color: #f4f4fd;
 }
 
-.logotype {
-  width: 115px;
+.logo .footer-logo {
+  display: inline-block;
   margin-bottom: 16px;
 }
 
 .footer-text {
-  width: 264px;
+  max-width: 264px;
 }
 
 /* #endregion footer */
